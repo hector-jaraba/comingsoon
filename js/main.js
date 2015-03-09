@@ -47,13 +47,25 @@ $(document).ready(function(){
   timeCounter();
 
 
-
-  var hi = new Vivus('hi', {type: 'delayed', duration: 200, start: 'autostart', forceRender: false, dashGap: 20}, function () {
-    if (window.console) {
-      console.log('Animation finished. [log triggered from callback]');
-    }
-  })
-
-  $(".content").delay(3000).fadeIn("slow");
-
 });
+
+var hi = new Vivus('hi', {type: 'delayed', duration: 200, start: 'autostart', forceRender: false, dashGap: 20}, function () {
+  if (window.console) {
+    console.log('Animation finished. [log triggered from callback]');
+  }
+})
+
+$(".content").delay(3000).fadeIn("slow");
+
+
+WebFontConfig = {
+  google: { families: [ 'Open+Sans:300'] }
+};
+(function() {
+  var wf = document.createElement('script');
+  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();
