@@ -105,6 +105,8 @@
         <script src="js/vendor/vivus.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
+        <script>
+        $(document).ready(function(){function e(){var e,n,t,o,a=new Date("Mar 27, 2015").getTime(),r=(document.getElementById("countdown"),document.getElementById("countdown-days")),d=document.getElementById("countdown-hours"),c=document.getElementById("countdown-minutes"),i=document.getElementById("countdown-seconds");setInterval(function(){var s=(new Date).getTime(),u=(a-s)/1e3;e=parseInt(u/86400),u%=86400,n=parseInt(u/3600),u%=3600,t=parseInt(u/60),o=parseInt(u%60),r.innerHTML=e,d.innerHTML=n,c.innerHTML=t,i.innerHTML=o},1e3)}e()});var hi=new Vivus("hi",{type:"delayed",duration:200,start:"autostart",forceRender:!1,dashGap:20},function(){window.console&&console.log("Animation finished. [log triggered from callback]")});$(".content").delay(3e3).fadeIn("slow"),WebFontConfig={google:{families:["Open+Sans:300"]}},function(){var e=document.createElement("script");e.src="js/vendor/webfont.js",e.type="text/javascript",e.async="true";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}();
+        </script>
     </body>
 </html>
